@@ -57,11 +57,11 @@ void sortTD(int Array[], int first, int last){
     printf("Call #%d to sort function:\n", index);
     printf("Sorting subarray between %d and %d\n", first + 1, last);
 
-    if (first < last){
+    if (first < last - 1){
         printf("\n");
         int mid = floor((first + last)/2);
         sortTD(Array, first, mid);
-        sortTD(Array, mid + 1, last);
+        sortTD(Array, mid, last);
         merge(Array, first, mid, last);
     } else {
         printf("This call is an anchor point\n\n");
