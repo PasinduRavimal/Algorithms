@@ -27,15 +27,6 @@ int partition(int Array[], int first, int last) {
     Array[i + 1] = Array[last];
     Array[last] = temp;
 
-    printf("Array after partitioning: ");
-
-    for (int i = 0; i < cLength; i++)
-    {
-        printf("%d ", Array[i]);
-    }
-
-    printf("\n\n");
-
     return i + 1;
 }
 
@@ -48,6 +39,17 @@ void quicksort(int Array[], int first, int last){
     if (first < last){
         printf("\n");
         int part = partition(Array, first, last);
+        
+        printf("Partitioning done. ");
+        printf("Pivot point index: %d\n", part + 1);
+
+        printf("Array after partitioning: ");
+        for (int i = 0; i < cLength; i++)
+        {
+            printf("%d ", Array[i]);
+        }
+        printf("\n\n");
+
         quicksort(Array, first, part - 1);
         quicksort(Array, part + 1, last);
     } else {
