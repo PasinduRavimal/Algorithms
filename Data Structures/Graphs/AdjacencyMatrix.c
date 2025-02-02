@@ -237,4 +237,7 @@ void GRAPHtraverseDFS(Graph g, int vertex, void (*print)(int)) {
 
     free(visited);
     visited = 0;
+
+    free(corrected);
+    corrected = 0;
 }
