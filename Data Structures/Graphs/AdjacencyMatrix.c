@@ -223,12 +223,7 @@ void GRAPHtraverseDFS(Graph g, int vertex, void (*print)(int)) {
     int i, j;
 
     for (i = 0; i < g->V; i++) {
-        for (j = 0; j < g->V; j++) {
-            if (array[j] == i + 1) {
-                corrected[i] = j + 1;
-                break;
-            }
-        }
+        corrected[array[i] - 1] = i + 1;
     }
 
     for (i = 0; i < g->V; i++) {
